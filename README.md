@@ -1,15 +1,67 @@
-# Navigation-System(C)
-This project implements a simple command-line application in C to find the shortest path between locations on a predefined map using Dijkstra's Algorithm.
+# 📍Campus Navigation System
+
+A terminal-based indoor navigation tool using Dijkstra’s Algorithm
+
+This project implements a complete campus navigation system written in C, using:
+
+Weighted adjacency list (linked list) graph
+
+Dijkstra shortest-path algorithm
+
+Compass directions (North, South-West, etc.)
+
+Menu-driven interface
+
+Case-insensitive and space-insensitive input
+
+Closest amenities (Top 3) query
+
+Perfect for navigating floors or buildings inside a campus.
 
 # 🚀 Features
 
-Shortest Path Calculation: Finds the path with the minimum total distance (weight).
+**✔ Navigate Between Locations**
 
-Step-by-Step Navigation: Provides clear, directional instructions for the route.
+Find the shortest path between any two nodes with step-by-step directions:
 
-Undirected Graph: All paths can be traveled in both directions.
+→ From Ground    |    go West     |    to WiFi      |    (20)
 
-Interactive Interface: Allows the user to repeatedly query for new routes until they choose to exit.
+→ From WiFi      |    go North     |   to Joint03    |   (45)
+
+→ From Joint03    |   go West     |    to MBA       |    (15)
+
+
+Includes:
+
+Exact distances
+
+Direction words
+
+Cleanly formatted output
+
+**✔ Closest Amenities (Top 3)**
+
+Example:
+
+Top 3 closest locations to Joint04:
+
+  • PrayerHall         → 15 units  (East)
+  
+  • Pigeonhole         → 20 units  (West)
+  
+  • Ground             → 40 units  (North-East)
+
+**✔ Known Nodes List**
+
+Displays all campus nodes in original order.
+
+**✔ Input Friendly**
+
+Not case-sensitive
+
+Ignores spaces (class 107 111 = Class107-111)
+
+Error-handling with automatic re-prompting.
 
 # 🧠 How It Works (Technical Overview)
 
@@ -21,3 +73,6 @@ Interactive Interface: Allows the user to repeatedly query for new routes until 
 
 **Error Handling:** Includes checks for invalid node names and cases where no path exists.
 
+# 📘 License
+
+**Free to use, modify, and extend for academic or personal projects.**
