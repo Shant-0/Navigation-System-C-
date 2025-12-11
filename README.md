@@ -150,6 +150,20 @@ LICENSE            → MIT License
 
 + prompt_for_node()
 
+## 🧠 Future Improvements
+
++ GUI using JavaFX or GTK
+
++ Floor-wise navigation
+
++ Visual map rendering
+
++ Alias names (“C1”, “Punch”, “Prayer”)
+
++ JSON export of path results
+
++ A* algorithm integration
+
 ## 👨‍💻 Author
 
 **Md. Junayed Ahmad Shanto**
