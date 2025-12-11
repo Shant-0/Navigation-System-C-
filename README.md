@@ -1,78 +1,162 @@
-# 📍Campus Navigation System
+# Campus Navigation System (C Project)
 
-A terminal-based indoor navigation tool using Dijkstra’s Algorithm
+[![Language](https://img.shields.io/badge/Language-C-blue.svg)]()
+[![Algorithm](https://img.shields.io/badge/Algorithm-Dijkstra-green.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)]()
+[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
 
-This project implements a complete campus navigation system written in C, using:
 
-Weighted adjacency list (linked list) graph
+A terminal-based Campus Navigation Assistant that calculates:
 
-Dijkstra shortest-path algorithm
+✔ Shortest route between two campus locations 
 
-Compass directions (North, South-West, etc.)
+✔ Step-by-step turn-by-turn directions 
 
-Menu-driven interface
+✔ Closest 3 nearby locations 
 
-Case-insensitive and space-insensitive input
+✔ Distance between all nodes 
 
-Closest amenities (Top 3) query
+✔ Clean, interactive menu interface
 
-Perfect for navigating floors or buildings inside a campus.
+Powered by Dijkstra’s Algorithm and an Adjacency List Graph.
 
 # 🚀 Features
 
-**✔ Navigate Between Locations**
+- Shortest Path Navigation 
 
-Find the shortest path between any two nodes with step-by-step directions:
+- Closest 3 Locations
 
-→ From Ground    |    go West     |    to WiFi      |    (20)
+- Human-readable directions (North, South-West, etc.)
 
-→ From WiFi      |    go North     |   to Joint03    |   (45)
+- Distance-based routing
 
-→ From Joint03    |   go West     |    to MBA       |    (15)
+- Error-proof input handling
 
+- Fast menu-driven interface
 
-Includes:
+# 🗺 Campus Nodes
 
-Exact distances
+The system includes 17 nodes representing real locations:
 
-Direction words
++ PunchGate
 
-Cleanly formatted output
++ Joint01 — Joint04
 
-**✔ Closest Amenities (Top 3)**
++ Ground
 
-Example:
++ WiFi
 
-Top 3 closest locations to Joint04:
++ LectureGallery
 
-  • PrayerHall         → 15 units  (East)
-  
-  • Pigeonhole         → 20 units  (West)
-  
-  • Ground             → 40 units  (North-East)
++ MBA
 
-**✔ Known Nodes List**
++ Class107-111
 
-Displays all campus nodes in original order.
++ Class112-115
 
-**✔ Input Friendly**
++ Pigeonhole
 
-Not case-sensitive
++ PrayerHall
 
-Ignores spaces (class 107 111 = Class107-111)
++ Journal
 
-Error-handling with automatic re-prompting.
++ Auditorium
 
-# 🧠 How It Works (Technical Overview)
++ StairsCafe
 
-**Graph Representation:** The campus map is stored as an Adjacency List using C structs (Edge). Each edge stores the destination node, the distance (weight), and the direction (dir).
++ Gate
 
-**Algorithm:** The dijkstra function is the core of the system. It uses a greedy approach to find the minimum distance from the source node to every other reachable node.
+The graph is fully undirected with proper compass directions.
 
-**Path Reconstruction:** Instead of just calculating the distance, Dijkstra's algorithm also populates a parent array. The print_route function uses this array to backtrack from the destination to the source, reconstructing the correct sequence of nodes and printing the stored directional instructions.
+# 🔧 Technologies
 
-**Error Handling:** Includes checks for invalid node names and cases where no path exists.
++ Language: ANSI C (C99/C11)
 
-# 📘 License
++ Graph Storage: Adjacency List (Linked List)
 
-**Free to use, modify, and extend for academic or personal projects.**
++ Path Reconstruction: Parent pointers
+
++ Direction Chains: Multi-hop direction sequence builder
+
++ Input Normalization: Whitespace removal + lowercase conversion
+
+# 📐 Algorithm
+
+Uses Dijkstra to compute shortest paths.
+
+Two versions implemented:
+
+* dijkstra()
+→ Optimized to stop early for single-destination routing.
+
+* dijkstra_all()
+→ Computes all distances for “closest locations”.
+
+# 📦 Compilation
+
+```gcc -Wall -Wextra -O2 -o campus_nav campus_nav.c```
+
+## ▶ Running 
+```./campus_nav```
+
+You will see:
+
+```
+=================================================
+              CAMPUS NAVIGATION SYSTEM
+=================================================
+
+Known locations:
+  • PunchGate
+  • Joint01
+  • Joint02
+  ...
+```
+Menu:
+
+```
+1. Show known locations
+2. Find route between two locations
+3. Show 3 closest locations
+4. Exit
+```
+
+# 🧱 Project Structure
+```
+campus_nav.c       → Main program with all logic
+README.md          → Documentation
+LICENSE            → MIT License
+```
+
+# 🛠 Key Functions
+
++ build_graph()
+
++ add_edge()
+
++ dijkstra()
+
++ dijkstra_all()
+
++ reconstruct_path()
+
++ direction_chain()
+
++ print_route()
+
++ show_closest()
+
++ normalize_input()
+
++ prompt_for_node()
+
+# 👨‍💻 Author
+
+**Md. Junayed Ahmad Shanto**
+
+Campus Navigation System — Pathfinding Project in C
+
+# 🪪 License
+
+Released under the MIT License.
+
