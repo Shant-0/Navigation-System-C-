@@ -5,8 +5,9 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
 
+A terminal-based Campus Navigation Assistant.
 
-A terminal-based Campus Navigation Assistant that calculates
+---
 
 ## 🚀 Features
 
@@ -68,13 +69,13 @@ Menu:
 ```
 
 ## 🧱 Project Structure
+```
+Campus_navigation.c   → Main program with all logic
 
-Campus_navigation.c → Main program with all logic
+README.md             → Documentation
 
-README.md           → Documentation
-
-LICENSE             → MIT License
-
+LICENSE               → MIT License
+```
 
 ## 🧠 Future Improvements
 
